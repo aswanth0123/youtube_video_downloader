@@ -22,10 +22,10 @@ def download1(request):
             else:
                 stream = video.streams.get_lowest_resolution()
             
-            op=request.FILES["folder_upload"]
-            print('op:',type(op))
+            # op=request.FILES["folder_upload"]
+            # print('op:',type(op))
 
-            stream.download(str(op)) 
+            stream.download() 
             
         # except:
             messages.success(request,'Not a valid link')
